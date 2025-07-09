@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Aushadhi and e-Upkaran Chatbot</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>e-Aushadhi and e-Upkaran Chatbot</h1>
+    </header>
+    
+    <main>
+        <div class="content">
+            <h2>Demonstration</h2>
+            <p>This is a demonstration page for our rule-based e-Aushadhi and e-Upkaran chatbot.</p>
+        </div>
+    </main>
+    
+    <!-- Chatbot Widget -->
+    <div id="chatbot-launcher" draggable="true">
+        <img th:src="@{images/logo-defence.jpeg}" alt="Logo" id="chatbot-icon">
+        <div id="tooltip" class="hidden">
+            <div class="tooltip-content">
+                <div class="tooltip-text">
+                    <span>👋 Hi, I'm e-Aushadhi and e-Upkaran Chatbot Assistant,</span>
+                </div>
+                <div class="tooltip-subtext">
+                    Click to chat with me!
+                </div>
+            </div>
+        </div>
+        <img id="minimizeIcon" src="https://cdn.jsdelivr.net/gh/corover/assets@19May25/askdisha-bucket/minimum.png" class="hidden">
+    </div>
+    
+    <!-- Chatbot Window -->
+    <div id="chatbot-window" class="hidden">
+        <div class="chatbot-header">
+            <div class="chatbot-title">e-Aushadhi and e-Upkaran Chatbot Assistant</div>
+            <div class="chatbot-controls">
+                <button id="minimize-btn" class="control-btn">−</button>
+            </div>
+        </div>
+        <div class="chatbot-messages" id="message-container">
+            <!-- Messages will be added here -->
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+    
+    <!-- Load these scripts at the end of the body -->
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.0/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+    <script th:src="@{/js/chat.js}"></script>
+</body>
+</html>

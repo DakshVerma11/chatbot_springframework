@@ -1,0 +1,22 @@
+package com.chatbot.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
+//import javax.persistence.EntityManagerFactory;
+
+import jakarta.persistence.EntityManagerFactory;
+
+@Configuration
+@EnableJpaRepositories(basePackages = "com.chatbot.repository")
+public class JpaConfig {
+    
+    @Bean
+    public PlatformTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
+        JpaTransactionManager txManager = new JpaTransactionManager();
+        txManager.setEntityManagerFactory(entityManagerFactory);
+        return txManager;
+    }
+}

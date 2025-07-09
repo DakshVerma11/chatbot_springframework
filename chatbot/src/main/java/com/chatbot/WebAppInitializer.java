@@ -1,5 +1,9 @@
 package com.chatbot;
 
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+import com.chatbot.config.RootConfig;
+import com.chatbot.config.WebConfig;
+
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {

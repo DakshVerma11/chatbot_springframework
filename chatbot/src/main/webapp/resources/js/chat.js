@@ -115,17 +115,30 @@ document.addEventListener('DOMContentLoaded', function() {
         // Show loading spinner
         showLoadingSpinner();
         
-        // Make AJAX request to server
-        $.ajax({
-            url: "/api/chat",
-            type: "POST",
-            contentType: "application/json",
-            data: JSON.stringify({ message: message }),
-            success: function(response) {
-                hideLoadingSpinner();
-                
-                // Process the response text for any links
-                let responseText = response.response;
+        console.log("Fetching response for: " + message);
+        
+        // Make fetch request to server
+        fetch('/chatbot/api/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ message: message })
+        })
+        .then(response => {
+            console.log("Response status: " + response.status);
+            if (!response.ok) {
+                throw new Error("Server responded with status: " + response.status);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("Received data:", data);
+            hideLoadingSpinner();
+            
+            // Process the response text for any links
+            if (data && data.response) {
+                let responseText = data.response;
                 let link = null;
                 
                 // Check if the response contains a link
@@ -150,11 +163,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Add the bot's response to the chat
                 addBotMessage(responseText, link);
-            },
-            error: function() {
-                hideLoadingSpinner();
-                addBotMessage("I'm sorry, I encountered an error while processing your request. Please try again.");
+            } else {
+                addBotMessage("I received an empty response from the server.");
             }
+        })
+        .catch(error => {
+            console.error("Error fetching response:", error);
+            hideLoadingSpinner();
+            addBotMessage("I'm sorry, I encountered an error while processing your request: " + error.message);
         });
     }
 
@@ -166,12 +182,10 @@ document.addEventListener('DOMContentLoaded', function() {
         loaderElement.classList.add('message', 'bot-message', 'loading-message');
         loaderElement.id = 'loading-spinner';
         
-        const spinnerImg = document.createElement('img');
-        spinnerImg.src = '../static/images/triangle-spinner.gif';
-        spinnerImg.alt = 'Loading...';
-        spinnerImg.classList.add('spinner-image');
+        const loadingText = document.createElement('div');
+        loadingText.textContent = "Thinking...";
         
-        loaderElement.appendChild(spinnerImg);
+        loaderElement.appendChild(loadingText);
         messageContainer.appendChild(loaderElement);
         
         // Scroll to bottom

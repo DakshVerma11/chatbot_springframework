@@ -1,22 +1,25 @@
 package com.chatbot.controller;
 
-import com.chatbot.service.ChatbotService;
+import com.chatbot.model.ChatbotResponse;
+import com.chatbot.repository.ChatbotResponseRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.FileWriter;
-import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api")
 public class ChatApiController {
 
-    private final ChatbotService chatbotService;
+    private final ChatbotResponseRepository repository;
+    private final Random random = new Random();
 
-    public ChatApiController(ChatbotService chatbotService) {
-        this.chatbotService = chatbotService;
+    public ChatApiController(ChatbotResponseRepository repository) {
+        this.repository = repository;
     }
 
     @PostMapping("/chat")
@@ -25,39 +28,82 @@ public class ChatApiController {
         Map<String, String> responseMap = new HashMap<>();
         
         try {
-            // Debug: Write to a file we can easily find
-            try (PrintWriter writer = new PrintWriter(new FileWriter("c:/temp/chatbot_debug.log", true))) {
-                writer.println("Received message: " + message);
-                
-                // Process the message
-                String response = chatbotService.processMessage(message);
-                writer.println("Response: " + response);
-                
-                responseMap.put("response", response);
+            // Log receipt of message
+            System.out.println("RECEIVED MESSAGE: " + message);
+            
+            if (message == null || message.isEmpty()) {
+                responseMap.put("response", "Please type a message.");
                 return ResponseEntity.ok(responseMap);
-            } catch (Exception e) {
-                // Log file write errors to console
-                System.err.println("Failed to write to debug log: " + e.getMessage());
-            }
-        } catch (Exception e) {
-            // Write exception to file
-            try (PrintWriter writer = new PrintWriter(new FileWriter("c:/temp/chatbot_error.log", true))) {
-                writer.println("ERROR PROCESSING: " + message);
-                e.printStackTrace(writer);
-            } catch (Exception ex) {
-                System.err.println("Failed to write error log: " + ex.getMessage());
             }
             
-            // Also to console
-            System.err.println("ERROR PROCESSING MESSAGE: " + message);
+            // Normalize the user input
+            String userInput = message.toLowerCase().trim();
+            System.out.println("Normalized user input: " + userInput);
+            
+            // Get all responses from the database
+            List<ChatbotResponse> allResponses = repository.findAll();
+            System.out.println("Found " + allResponses.size() + " total responses");
+            
+            // List to store matching responses
+            List<ChatbotResponse> matchingResponses = new ArrayList<>();
+            
+            // Check each response for keyword matches
+            for (ChatbotResponse response : allResponses) {
+                if (response.getKeywords() != null && !response.getKeywords().isEmpty()) {
+                    String keywordsString = response.getKeywords().toLowerCase();
+                    System.out.println("Checking response ID " + response.getId() + " with keywords: " + keywordsString);
+                    
+                    // Split the keywords string by comma
+                    String[] keywords = keywordsString.split(",");
+                    
+                    // Check each keyword
+                    for (String keyword : keywords) {
+                        keyword = keyword.trim();
+                        System.out.println("  Checking if '" + userInput + "' contains keyword '" + keyword + "'");
+                        
+                        // Check for keyword match
+                        if (keyword.length() > 0 && userInput.contains(keyword)) {
+                            System.out.println("  MATCH FOUND with keyword: " + keyword);
+                            matchingResponses.add(response);
+                            break; // Once we find a match, move to the next response
+                        }
+                    }
+                }
+            }
+            
+            System.out.println("Found " + matchingResponses.size() + " matching responses");
+            
+            // Return appropriate response
+            if (matchingResponses.isEmpty()) {
+                // No matching responses found
+                System.out.println("No matches found, returning default message");
+                responseMap.put("response", "I'm sorry, I don't understand that. Could you try rephrasing?");
+            } else {
+                // Select a random matching response
+                ChatbotResponse selectedResponse = matchingResponses.get(random.nextInt(matchingResponses.size()));
+                System.out.println("Selected response ID: " + selectedResponse.getId());
+                
+                // Format the response with link if available
+                String responseText = selectedResponse.getResponse();
+                
+                if (selectedResponse.hasLink()) {
+                    System.out.println("Response has link: " + selectedResponse.getLinkText() + " - " + selectedResponse.getLinkUrl());
+                    responseText += "\n\nClick here for more information: " + 
+                                   selectedResponse.getLinkText() + " (" + 
+                                   selectedResponse.getLinkUrl() + ")";
+                }
+                
+                responseMap.put("response", responseText);
+            }
+            
+            return ResponseEntity.ok(responseMap);
+            
+        } catch (Exception e) {
+            System.err.println("ERROR IN API: " + e.getMessage());
             e.printStackTrace();
             
-            responseMap.put("response", "I'm sorry, I encountered an error while processing your request. Please try again.");
-            return ResponseEntity.status(500).body(responseMap);
+            responseMap.put("response", "I'm sorry, I encountered an error: " + e.getMessage());
+            return ResponseEntity.ok(responseMap);
         }
-        
-        // Fallback return if file writing failed but message processing succeeded
-        responseMap.put("response", "Something went wrong with logging, but your message was processed.");
-        return ResponseEntity.ok(responseMap);
     }
 }

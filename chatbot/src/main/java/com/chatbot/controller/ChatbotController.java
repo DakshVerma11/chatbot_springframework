@@ -4,6 +4,7 @@ import com.chatbot.model.ChatbotResponse;
 import com.chatbot.service.ChatbotService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,11 +33,20 @@ public class ChatbotController {
     }
 
     @PostMapping("/api/response")
+    @ResponseBody
+    @Transactional
     public ResponseEntity<ChatbotResponse> addResponse(@RequestBody ChatbotResponse response) {
-        return ResponseEntity.ok(chatbotService.addResponse(response));
+        try {
+            ChatbotResponse savedResponse = chatbotService.addResponse(response);
+            return ResponseEntity.ok(savedResponse);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
     }
 
     @GetMapping("/api/responses")
+    @ResponseBody
     public ResponseEntity<List<ChatbotResponse>> getAllResponses() {
         return ResponseEntity.ok(chatbotService.getAllResponses());
     }

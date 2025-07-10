@@ -78,6 +78,4 @@ public class ChatbotResponse {
         return linkText != null && !linkText.isEmpty() && 
                linkUrl != null && !linkUrl.isEmpty();
     }
-
-	
 }

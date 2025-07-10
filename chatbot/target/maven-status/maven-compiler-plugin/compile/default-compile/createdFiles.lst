@@ -1,0 +1,17 @@
+com\chatbot\repository\ChatbotResponseRepository.class
+com\chatbot\config\WebSocketConfig.class
+com\chatbot\util\KeywordMatcher.class
+com\chatbot\config\RootConfig.class
+com\chatbot\config\DataLoader$1.class
+com\chatbot\config\WebSocketEventListener.class
+com\chatbot\controller\ChatbotController.class
+com\chatbot\model\ChatbotResponse.class
+com\chatbot\config\WebConfig.class
+com\chatbot\controller\ChatApiController.class
+com\chatbot\config\JpaConfig.class
+com\chatbot\service\ChatbotService.class
+com\chatbot\dto\ChatMessage$MessageType.class
+com\chatbot\dto\ChatMessage.class
+com\chatbot\config\DataLoader.class
+com\chatbot\WebAppInitializer.class
+com\chatbot\controller\WebSocketController.class

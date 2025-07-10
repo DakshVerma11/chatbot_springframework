@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+        }
+        .response-card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Chatbot Admin Dashboard</h1>
+        
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        Add New Response
+                    </div>
+                    <div class="card-body">
+                        <form id="responseForm">
+                            <div class="mb-3">
+                                <label for="keywords" class="form-label">Keywords (comma-separated)</label>
+                                <input type="text" class="form-control" id="keywords" required>
+                                <div class="form-text">Enter keywords separated by commas. Example: hello,hi,greetings</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="response" class="form-label">Response Text (No special characters allowed and use "/n" for new line)</label>
+                                <textarea class="form-control" id="response" rows="3" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="linkText" class="form-label">Link Text (optional)</label>
+                                <input type="text" class="form-control" id="linkText">
+                            </div>
+                            <div class="mb-3">
+                                <label for="linkUrl" class="form-label">Link URL (optional)</label>
+                                <input type="url" class="form-control" id="linkUrl">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add Response</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="mb-3">Existing Responses</h2>
+        <div class="row" id="responsesList">
+            <div th:each="response : ${responses}" class="col-md-6">
+                <div class="card response-card">
+                    <div class="card-header">
+                        Keywords: <span th:text="${response.keywords}"></span>
+                    </div>
+                    <div class="card-body">
+                        <p th:text="${response.response}"></p>
+                        <div th:if="${response.linkText != null and response.linkUrl != null}">
+                            <p><strong>Link:</strong> <a th:href="${response.linkUrl}" th:text="${response.linkText}" target="_blank"></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('responseForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const response = {
+                keywords: document.getElementById('keywords').value,
+                response: document.getElementById('response').value,
+                linkText: document.getElementById('linkText').value || null,
+                linkUrl: document.getElementById('linkUrl').value || null
+            };
+            
+            fetch('/api/response', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(response),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Response added successfully!');
+                window.location.reload();
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Error adding response');
+            });
+        });
+    </script>
+</body>
+</html>

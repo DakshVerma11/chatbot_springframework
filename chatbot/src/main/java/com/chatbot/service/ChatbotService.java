@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Random;
 
 @Service
@@ -45,13 +46,8 @@ public class ChatbotService {
                     for (String keyword : keywords) {
                         keyword = keyword.toLowerCase().trim();
                         
-                        // Check for keyword matches
-                        if (userMessage.equals(keyword) ||              // Exact match
-                            userMessage.contains(" " + keyword + " ") || // Keyword as a complete word in the middle
-                            userMessage.startsWith(keyword + " ") ||     // Keyword at the start
-                            userMessage.endsWith(" " + keyword) ||       // Keyword at the end
-                            (keyword.contains(" ") && userMessage.contains(keyword))) { // Multi-word keyword
-                            
+                        // Check if keyword is in the user message
+                        if (userMessage.contains(keyword)) {
                             System.out.println("ChatbotService: Found match with keyword: " + keyword);
                             matchingResponses.add(response);
                             break; // Move to the next response once we find a match
@@ -88,6 +84,21 @@ public class ChatbotService {
     @Transactional
     public ChatbotResponse addResponse(ChatbotResponse response) {
         return responseRepository.save(response);
+    }
+    
+    @Transactional
+    public ChatbotResponse updateResponse(ChatbotResponse response) {
+        return responseRepository.save(response);
+    }
+    
+    @Transactional
+    public void deleteResponse(Long id) {
+        responseRepository.deleteById(id);
+    }
+    
+    @Transactional(readOnly = true)
+    public Optional<ChatbotResponse> getResponseById(Long id) {
+        return responseRepository.findById(id);
     }
 
     @Transactional(readOnly = true)

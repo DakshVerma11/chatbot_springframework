@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (chatbotLauncher) chatbotLauncher.classList.remove('hidden');
     
     // Typing speed (milliseconds per character)
-    const typingSpeed = 20;
+    const typingSpeed = 15;
     
     // Show initial greeting when chatbot is first opened
     let firstOpen = true;
@@ -53,12 +53,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Show tooltip after a delay
-    setTimeout(showTooltip, 1000);
+    setTimeout(showTooltip, 10);
 
     function showTooltip() {
         if (tooltip) {
             tooltip.classList.remove('hidden');
-            setTimeout(() => { tooltip.classList.add('hidden'); }, 5000);
+            //setTimeout(() => { tooltip.classList.add('hidden'); }, 500000);
         }
     }
 

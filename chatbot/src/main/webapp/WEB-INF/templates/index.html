@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-Aushadhi and e-Upkaran AI Chat-bot</title>
+    <meta name="description" content="AI-powered chatbot for e-Aushadhi and e-Upkaran assistance">
+    <title>e-Aushadhi and e-Upkaran AI Chat Assistant</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -14,13 +16,14 @@
     <main>
         <div class="content">
             <h2>Demonstration</h2>
-            <p>This is a demonstration page for our rule-based e-Aushadhi and e-Upkaran AI Chat-bot.</p>
+            <p>This is a demonstration page for our e-Aushadhi and e-Upkaran AI Chat-bot.</p>
+            <p class="update-info">Last updated: 2025-07-17</p>
         </div>
     </main>
     
     <!-- Chatbot Widget -->
-    <div id="chatbot-launcher" draggable="true">
-        <img src="/chatbot/images/salute (1).jpg" alt="Logo" id="chatbot-icon">
+    <div id="chatbot-launcher" draggable="true" aria-label="Open chatbot" role="button" tabindex="0">
+        <img src="/chatbot/images/salute (1).jpg" alt="Chatbot Logo" id="chatbot-icon">
         <div id="tooltip" class="hidden">
             <div class="tooltip-content">
                 <div class="tooltip-text">
@@ -31,28 +34,55 @@
                 </div>
             </div>
         </div>
-        <img id="minimizeIcon" src="https://cdn.jsdelivr.net/gh/corover/assets@19May25/askdisha-bucket/minimum.png" class="hidden">
+        <img id="minimizeIcon" src="https://cdn.jsdelivr.net/gh/corover/assets@19May25/askdisha-bucket/minimum.png" class="hidden" alt="Minimize">
     </div>
     
     <!-- Chatbot Window -->
-    <div id="chatbot-window" class="hidden">
+    <div id="chatbot-window" class="hidden" aria-live="polite">
         <div class="chatbot-header">
-            <div class="chatbot-title">AI e-Aushadhi and e-Upkaran Chat-bot Assistant </div>
+            <div class="chatbot-title">AI e-Aushadhi and e-Upkaran Chat-bot Assistant</div>
             <div class="chatbot-controls">
-            		<button id="clear-btn" class="control-btn" title="Clear Chat">🗑️</button>
-                <button id="minimize-btn" class="control-btn">−</button>
+                <button id="clear-btn" class="control-btn" title="Clear Chat" aria-label="Clear chat history">🗑️</button>
+                <button id="minimize-btn" class="control-btn" aria-label="Minimize chatbot">−</button>
             </div>
         </div>
+        
         <div class="chatbot-messages" id="message-container">
-            <!-- Messages will be added here -->
+            <!-- Messages will be added here dynamically -->
         </div>
+        
+        <div id="speech-status" class="hidden">
+            <i class="fas fa-circle-notch fa-spin"></i> Listening...
+        </div>
+        
         <div class="chatbot-input">
-            <input type="text" id="user-input" placeholder="Type a message...">
-            <button id="send-btn">Send</button>
+            <input type="text" 
+                   id="user-input" 
+                   placeholder="Type a message..." 
+                   aria-label="Type your message here"
+                   autocomplete="off">
+            
+            <button id="mic-btn" 
+                    class="mic-button" 
+                    title="Speak your message">
+                    
+                <i class="fas fa-microphone"></i>
+               
+            </button>
+            
+            <button id="send-btn" aria-label="Send message">Send</button>
         </div>
     </div>
-    
-    <!-- Load these scripts at the end of the body -->
+    <!--  -->
+    <!-- Footer with attribution 
+    <footer class="page-footer">
+        <div class="container">
+            <p>© 2025 e-Aushadhi and e-Upkaran | Powered by AI</p>
+        </div>
+    </footer>
+    -->
+    <!-- Load scripts -->
     <script th:src="@{/js/chat.js}"></script>
+    <script th:src="@{/js/speech-recognition.js}"></script>
 </body>
 </html>

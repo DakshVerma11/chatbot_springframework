@@ -1,5 +1,7 @@
 package com.chatbot.config;
-
+/*
+ * Loads the data from the database
+ */
 import com.chatbot.model.ChatbotResponse;
 import com.chatbot.repository.ChatbotResponseRepository;
 import com.fasterxml.jackson.core.type.TypeReference;

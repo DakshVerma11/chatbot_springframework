@@ -36,7 +36,7 @@ public class ChatApiController {
         
         try {
             // Log receipt of message
-            System.out.println("RECEIVED MESSAGE: " + message);
+            //System.out.println("RECEIVED MESSAGE: " + message);
             
             if (message == null || message.isEmpty()) {
                 responseMap.put("response", "Please type a message.");
@@ -45,7 +45,7 @@ public class ChatApiController {
             
             // Normalize the user input
             String userInput = message.toLowerCase().trim();
-            System.out.println("Normalized user input: " + userInput);
+            //System.out.println("Normalized user input: " + userInput);
             
             String ipAddress = "192.168.1.1";//assign actual ip address
             String userId = "user"; // assign "user" for now
@@ -56,7 +56,7 @@ public class ChatApiController {
             
             // Get all responses from the database
             List<ChatbotResponse> allResponses = repository.findAll();
-            System.out.println("Found " + allResponses.size() + " total responses");
+            //System.out.println("Found " + allResponses.size() + " total responses");
             
             // List to store matching responses
             List<ChatbotResponse> matchingResponses = new ArrayList<>();
@@ -65,7 +65,7 @@ public class ChatApiController {
             for (ChatbotResponse response : allResponses) {
                 if (response.getKeywords() != null && !response.getKeywords().isEmpty()) {
                     String keywordsString = response.getKeywords().toLowerCase();
-                    System.out.println("Checking response ID " + response.getId() + " with keywords: " + keywordsString);
+                    //System.out.println("Checking response ID " + response.getId() + " with keywords: " + keywordsString);
                     
                     // Split the keywords string by comma
                     String[] keywords = keywordsString.split(",");
@@ -73,7 +73,7 @@ public class ChatApiController {
                     // Check each keyword
                     for (String keyword : keywords) {
                         keyword = keyword.trim();
-                        System.out.println("  Checking if '" + userInput + "' contains keyword '" + keyword + "'");
+                        //System.out.println("  Checking if '" + userInput + "' contains keyword '" + keyword + "'");
                         
                         // Check for keyword match
                         if (keyword.length() > 0 && userInput.contains(keyword)) {
@@ -85,7 +85,7 @@ public class ChatApiController {
                 }
             }
             
-            System.out.println("Found " + matchingResponses.size() + " matching responses");
+            //System.out.println("Found " + matchingResponses.size() + " matching responses");
             
             // Return appropriate response
             if (matchingResponses.isEmpty()) {

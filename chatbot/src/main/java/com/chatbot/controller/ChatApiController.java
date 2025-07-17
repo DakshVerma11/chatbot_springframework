@@ -2,9 +2,13 @@ package com.chatbot.controller;
 
 import com.chatbot.model.ChatbotResponse;
 import com.chatbot.repository.ChatbotResponseRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.chatbot.model.QueryLog;
+import com.chatbot.service.QueryLogService;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,10 +20,13 @@ import java.util.List;
 public class ChatApiController {
 
     private final ChatbotResponseRepository repository;
+    private final QueryLogService queryLogService;
     private final Random random = new Random();
 
-    public ChatApiController(ChatbotResponseRepository repository) {
+    @Autowired
+    public ChatApiController(ChatbotResponseRepository repository, QueryLogService queryLogService) {
         this.repository = repository;
+        this.queryLogService = queryLogService;
     }
 
     @PostMapping("/chat")
@@ -39,6 +46,13 @@ public class ChatApiController {
             // Normalize the user input
             String userInput = message.toLowerCase().trim();
             System.out.println("Normalized user input: " + userInput);
+            
+            String ipAddress = "192.168.1.1";//assign actual ip address
+            String userId = "user"; // assign "user" for now
+            LocalDateTime timestamp = LocalDateTime.now();
+
+            QueryLog log = new QueryLog(userId, ipAddress, userInput, timestamp);
+            queryLogService.logQuery(log);
             
             // Get all responses from the database
             List<ChatbotResponse> allResponses = repository.findAll();

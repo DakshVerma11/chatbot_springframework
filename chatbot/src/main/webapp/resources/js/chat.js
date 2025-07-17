@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const chatbotLauncher = document.getElementById('chatbot-launcher');
     const chatbotWindow = document.getElementById('chatbot-window');
     const minimizeBtn = document.getElementById('minimize-btn');
+    const clearBtn = document.getElementById('clear-btn');
     const userInput = document.getElementById('user-input');
     const sendBtn = document.getElementById('send-btn');
     const messageContainer = document.getElementById('message-container');
@@ -37,6 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log("Minimize clicked");
             e.stopPropagation(); // Prevent event bubbling
             minimizeChatbot();
+        });
+    }
+    
+    if (clearBtn) {
+        clearBtn.addEventListener('click', function(e) {
+            console.log("Clear chat clicked");
+            clearChat();
         });
     }
     
@@ -90,6 +98,20 @@ document.addEventListener('DOMContentLoaded', function() {
         if (chatbotWindow && chatbotLauncher) {
             chatbotWindow.classList.add('hidden');
             chatbotLauncher.classList.remove('hidden');
+        }
+    }
+    
+    // Clear chat messages
+    function clearChat() {
+        console.log("Clearing chat messages");
+        if (messageContainer) {
+            // Remove all messages
+            messageContainer.innerHTML = '';
+            
+            // Add the greeting message back
+            setTimeout(() => {
+                addBotMessage("Hello, I'm e-Aushadhi and e-Upkaran Assistant. How can I help you today?");
+            }, 100);
         }
     }
 

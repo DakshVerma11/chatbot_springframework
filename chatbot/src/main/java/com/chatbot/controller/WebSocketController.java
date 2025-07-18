@@ -20,18 +20,20 @@ public class WebSocketController {
     @MessageMapping("/chat.sendMessage")
     @SendTo("/topic/public")
     public ChatMessage sendMessage(@Payload ChatMessage chatMessage) {
-        System.out.println("Received message: " + chatMessage.getContent());
+        //System.out.println("Received message: " + chatMessage.getContent());
         String botResponse = chatbotService.processMessage(chatMessage.getContent());
-        System.out.println("Sending response: " + botResponse);
+        //System.out.println("Sending response: " + botResponse);
         return new ChatMessage(ChatMessage.MessageType.CHAT, botResponse, "Chatbot");
     }
 
     @MessageMapping("/chat.newUser")
     @SendTo("/topic/public")
-    public ChatMessage newUser(@Payload ChatMessage chatMessage, 
-                              SimpMessageHeaderAccessor headerAccessor) {
+    public ChatMessage newUser(@Payload ChatMessage chatMessage,SimpMessageHeaderAccessor headerAccessor) {
         System.out.println("New user joined: " + chatMessage.getSender());
-        // Add username in web socket session
+        /*
+         * 
+         * Define username properly
+         */
         headerAccessor.getSessionAttributes().put("username", chatMessage.getSender());
         return new ChatMessage(ChatMessage.MessageType.JOIN,
                               "Hello! How can I help you today?",

@@ -119,28 +119,25 @@ The database schema consists of two primary entities:
 ### Chat Interface
 
 ![Chat-bot Window](assets/chatbot-window.png)
-*The floating chat window with an input field and control buttons. This interface allows users to interact with the chatbot seamlessly.*
+The floating chat window with an input field and control buttons. This interface allows users to interact with the chatbot seamlessly.
 
-You can also refer to the following images for a deeper understanding of the chat interface:
 
-* ![Chatbot Window](assets/chat-window.png)
-  *An alternative view of whole page for the Chat-bot Assistant.*
+![Chatbot Window](assets/chat-window.png)
+*An alternative view of whole page for the Chat-bot Assistant.*
 
 ### Admin Dashboard
 
-![Admin Dashboard](assets/admin-dashboard.png)
 *The administrative interface for managing chatbot responses and user interactions. This dashboard allows the administrator to easily configure and monitor the system’s performance.*
 
-Additionally, the admin dashboard features different states for managing chatbot operations:
 
-* ![Admin Dashboard - Create](assets/admin-dashboard-create.png)
-  *The screen used for creating or adding new chatbot responses.*
+![Admin Dashboard - Create](assets/admin-dashboard-create.png)
+*The screen used for creating or adding new chatbot responses.*
 
-* ![Admin Dashboard - Edit](assets/admin-dashboard-edit.png)
-  *The screen for editing existing chatbot responses or configurations.*
+![Admin Dashboard - Edit](assets/admin-dashboard-edit.png)
+*The screen for editing existing chatbot responses or configurations.*
 
-* ![Admin Dashboard - Remove](assets/admin-dashboard-remove.png)
-  *The screen for removing or disabling certain chatbot responses.*
+![Admin Dashboard - Remove](assets/admin-dashboard-remove.png)
+*The screen for removing or disabling certain chatbot responses.*
 
 ### Query Log Dashboard
 

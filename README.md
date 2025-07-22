@@ -112,19 +112,42 @@ The database schema consists of two primary entities:
 | `/querylogs` | GET | Admin | Renders the query log viewer with statistics |
 | `/querylogs/search` | GET | Admin | Renders filtered query log results |
 
+
+
 ## 📸 Screenshots
 
 ### Chat Interface
-![Chat-bot Window](assets/chat-window.png)
-*The floating chat window with input field and control buttons*
+
+![Chat-bot Window](assets/chatbot-window.png)
+*The floating chat window with an input field and control buttons. This interface allows users to interact with the chatbot seamlessly.*
+
+You can also refer to the following images for a deeper understanding of the chat interface:
+
+* ![Chatbot Window](assets/chat-window.png)
+  *An alternative view of whole page for the Chat-bot Assistant.*
 
 ### Admin Dashboard
+
 ![Admin Dashboard](assets/admin-dashboard.png)
-*The administrative interface for managing chatbot responses*
+*The administrative interface for managing chatbot responses and user interactions. This dashboard allows the administrator to easily configure and monitor the system’s performance.*
+
+Additionally, the admin dashboard features different states for managing chatbot operations:
+
+* ![Admin Dashboard - Create](assets/admin-dashboard-create.png)
+  *The screen used for creating or adding new chatbot responses.*
+
+* ![Admin Dashboard - Edit](assets/admin-dashboard-edit.png)
+  *The screen for editing existing chatbot responses or configurations.*
+
+* ![Admin Dashboard - Remove](assets/admin-dashboard-remove.png)
+  *The screen for removing or disabling certain chatbot responses.*
 
 ### Query Log Dashboard
+
 ![Query Log Dashboard](assets/querylog-dashboard.png)
-*Analytics dashboard showing user interaction statistics*
+*Analytics dashboard showing user interaction statistics, helping administrators track the chatbot's performance and identify areas for improvement.*
+
+
 
 ## 🧩 Core Components
 

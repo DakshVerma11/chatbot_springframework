@@ -228,15 +228,17 @@ document.addEventListener('DOMContentLoaded', function () {
             if (finalTranscript.trim()) {
                 addUserMessage(finalTranscript.trim());
                 processMessage(finalTranscript.trim());
+                userInput.value = ''; // ✅ clear chatbox after sending
                 resultReceived = true;
             }
         };
+
 
         recognition.onend = () => {
             isListening = false;
             micButton.classList.remove('listening');
             speechStatus.classList.add('hidden');
-
+            
             if (!resultReceived && userInput.value.trim()) {
                 sendMessage();
             }

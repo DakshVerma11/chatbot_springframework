@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI e-Aushadhi & e-Upkaran Chatbot Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for mic icon (use CDN or your own path) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body>
+
+<!-- Chatbot Widget -->
+<div id="chatbot-launcher" draggable="true" aria-label="Open chatbot" role="button" tabindex="0">
+    <img src="saluteLogo.jpg" alt="Chatbot Logo" id="chatbot-icon">
+    <div id="tooltip" class="hidden">
+        <div class="tooltip-content">
+            <div class="tooltip-text">
+                <span>👋 Hi, I'm e-Aushadhi and e-Upkaran AI Chat-bot Assistant,</span>
+            </div>
+            <div class="tooltip-subtext">
+                Click to chat with me!
+            </div>
+        </div>
+    </div>
+    <img id="minimizeIcon" src="https://cdn.jsdelivr.net/gh/corover/assets@19May25/askdisha-bucket/minimum.png" class="hidden" alt="Minimize">
+</div>
+
+<!-- Chatbot Window -->
+<div id="chatbot-window" class="hidden" aria-live="polite">
+    <div class="chatbot-header">
+        <div class="chatbot-title">AI e-Aushadhi and e-Upkaran Chat-bot Assistant</div>
+        <div class="chatbot-controls">
+            <button id="clear-btn" class="control-btn" title="Clear Chat" aria-label="Clear chat history">🗑️</button>
+            <button id="minimize-btn" class="control-btn" aria-label="Minimize chatbot">−</button>
+        </div>
+    </div>
+    <div class="chatbot-messages" id="message-container">
+        <!-- Messages will be added here dynamically -->
+    </div>
+    <div id="speech-status" class="hidden">
+        <i class="fas fa-circle-notch fa-spin"></i> Listening...
+    </div>
+    <div class="chatbot-input">
+        <input type="text" 
+            id="user-input" 
+            placeholder="Type a message..." 
+            aria-label="Type your message here"
+            autocomplete="off">
+        <button id="mic-btn" class="mic-button" title="Speak your message">
+            <i class="fas fa-microphone"></i>
+        </button>
+        <button id="send-btn" aria-label="Send message">Send</button>
+    </div>
+</div>
+
+<!-- Script -->
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+[
+  {
+    "id": 9,
+    "keywords": ["DGAFMS", "Armed Forces Medical Services", "Directorate General", "medical policy"],
+    "response": "The Directorate General of Armed Forces Medical Services (DGAFMS) is the controlling authority of AFMS. The Director General Armed Forces Medical Services is the head of the Armed Forces Medical Services and is responsible to the Government for the overall medical policy in so far as they relate to the Armed Forces. The Director Generals of Medical Services of Army, Navy and Air Force are the medical advisors to their respective Chief of Staff. Its primary functions are planning, standardization, provisioning & procurement and storage of expandable (drugs and consumables) and non-expandable (equipment) stores required for medical treatment. The requirement of medical stores is met through central procurement by DGAFMS. To meet shortfalls in supply of expandable stores, local purchases are done by medical depots for dependent units and hospitals. However, the procurement and maintenance of medical equipment for all hospitals and continues up gradation of hospitals in terms of medical equipment is done centrally by DGAFMS."
+  },
+  {
+    "id": 20,
+    "keywords": ["DPP process", "DPP draft", "CFA approval", "budget booking"],
+    "response": "For DPP Process in e-Aushadhi and e-Upkaran:\n1. Login with valid credentials\n2. For DPP Draft: Go to Services → Supply Order Management → DPP Process, select 'DPP Draft', fill details, select PVMS No-Nomenclature, fill RE Entry Details, click ADD and then Save\n3. For CFA Approval: Select 'CFA Approval', fill details, select Distributor Name, fill Manual Supply Order No, select Supply order Prefix, check Component Details, and click Save\n4. For Budget Booking: Go to Services → Supply Order Management → Draft Supply Order Preparation, select Unit Name and Supply order Status, click SO Budgetary, click Budgeting, fill SO Funding Source Details, click ADD, then Budgeting and Final Save",
+    "link": {
+      "text": "Download User Manual for DPP Process",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=DPP.pdf&methodname=GET&fhttf=e41d24c294bf9f845902e7f24b841775"
+    }
+  },
+  {
+    "id": 39,
+    "keywords": ["interactive session", "technical support", "june 2025", "support session"],
+    "response": "Technical Support [Interactive Session] from 9th & 10th June, 2025 - Effectively Tracking and Monitoring Expendable and Non-Expendable Items using eAushadhi and eUpkaran. Topics covered include:\n• Inventory Management for Expendable and Non-Expendable items\n• Equipment Census as per AP & Distribution\n• Indent Generation and Approval processes\n• GeM processes and Batch Entry procedures",
+    "link": {
+      "text": "Download eUpkaran Technical Support Session Guide",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=eUpkaran%20Technical%20Support%20-%20Interactive%20Session%20dtd%209th%20and%2010th%20June%202025.pdf&methodname=GET&fhttf=1b737e71d66e7e6569b86b86c7e85cb9"
+    }
+  },
+  {
+    "id": 25,
+    "keywords": ["indent generation process", "indent approval process", "acknowledge drug", "CRV desk"],
+    "response": "For Indent Generation in e-Aushadhi and e-Upkaran:\n1. Go to Services → Issuing of Drug Online Management → Indent Generation\n2. Click Generate button, fill details, click Go\n3. Fill Demanded Qty, check 'Current Stock checked and verified', add remarks\n4. Click Draft Save to save as draft or Final Save to generate the indent\n5. For approval: Go to Services → Approval Management → Indent Generation Approval\n6. To acknowledge: Go to Services → Issuing of Drug Online Management → Acknowledge Drug\n7. For CRV: Go to Services → Issuing of Drug Online Management → CRV Desk",
+    "link": {
+      "text": "Download User Manual for Indent Generation",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=Indent%20Generation%20and%20Approval%20at%20Unit%20Level.pdf&methodname=GET&fhttf=6fedc8b92d1a68ff19547a4b084445c4"
+    }
+  },
+  {
+    "id": 1,
+    "keywords": ["PVMS", "Priced Vocabulary", "medical stores", "drug codification", "medical stores codification", "six digits", "drug code"],
+    "response": "The stores in service use are listed in 'Priced Vocabulary of Medical Stores' (PVMS) consisting of 29 sections. Each drug is codified in six digits where the first two digits denote PVMS section; the next two indicate the sub-section and the last two digits the particular drug."
+  },
+  {
+    "id": 21,
+    "keywords": ["manufacturer master", "supplier master", "add manufacturer", "add supplier", "PPP master"],
+    "response": "To add Manufacture, Supplier and PPP in e-Aushadhi and e-Upkaran:\n1. Go to Admin → Manufacture Management → Manufacture/Supplier Master\n2. Click on Add Button\n3. Fill the Details, Select Supplier Type and Fill Bank Details and Other Details\n4. Click on Save Button to save\n5. After adding, you can also Modify, Delete and View the entries",
+    "link": {
+      "text": "Download User Manual for Manufacture",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=Manufacture.docx&methodname=GET&fhttf=c0c2e04df4a579fda84030e1c0a0b315"
+    }
+  },
+  {
+    "id": 22,
+    "keywords": ["equipment census", "inventory management", "ME scale", "equipment inventory"],
+    "response": "For Equipment Census & Inventory at Unit Level in e-Aushadhi and e-Upkaran:\n1. Login with valid credentials\n2. Go to Home Menu → Services → eUpkaran Census and Inventory → Add or Amend Unit Equipment Census – ME Scale\n3. CO Level approves Equipment Census\n4. Set up Department/ME Scale Wise Distribution as AP\n5. View Equipment Inventory as per AP or Surplus Quantity through the Dashboard",
+    "link": {
+      "text": "Download User Manual for Equipment Census",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=Equipment%20Census,%20Distribuation,%20Inventory%20and%20Locator%20at%20Unit%20Level%20and%20CO%20Level.pdf&methodname=GET&fhttf=064f2d032217cf99f5d1db18a20f5ede"
+    }
+  },
+  {
+    "id": 28,
+    "keywords": ["drug inventory", "inventory management", "stock management", "drug locator"],
+    "response": "For Stock/Inventory Management in e-Aushadhi and e-Upkaran:\n1. Go to Services → Stock/Inventory Management → Drug Inventory\n2. Click ADD, fill Item Details and Item Inventory including Batch details\n3. For multiple batches, click the plus(+) sign and fill details\n4. Click Save to store the Drug Inventory\n5. To view: Go to Services → Stock/Inventory Management → Drug Inventory View\n6. For locating drugs: Go to Services → Stock/Inventory Management → Drug Locator",
+    "link": {
+      "text": "Download User Manual for Drug Inventory",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=Drug%20Inventory.pdf&methodname=GET&fhttf=514ae33bcaa1d8e659dd9e34ad95a7f3"
+    }
+  },
+  {
+    "id": 26,
+    "keywords": ["DAO approval", "issue indent", "packaging entry", "transport entry", "gate pass"],
+    "response": "For Indent Approval at DAO Level in e-Aushadhi and e-Upkaran:\n1. Go to Services → Approval Management → Indent Approval at DAO Level\n2. For Issue Voucher: Go to Services → Issuing of Drug Online Management → Issue Management\n3. For Packaging Entry: Go to Services → Issuing of Drug Online Management → Packaging Entry Process\n4. For Transport Entry: Go to Services → Issuing of Drug Online Management → Transport Entry Process\n5. For Gate Pass: Go to Services → Issuing of Drug Online Management → Gate pass Out Security Entry Process",
+    "link": {
+      "text": "Download User Manual for Indent Management at Depot level",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=Indent%20Management%20at%20Depot%20level.pdf&methodname=GET&fhttf=cef5499e03c101d889205ca910da7b89"
+    }
+  },
+  {
+    "id": 3,
+    "keywords": ["medical equipment", "medical devices", "equipment", "medical diagnosis equipment", "treatment equipment"],
+    "response": "Medical equipment is used for the specific purposes of diagnosis and treatment of disease or rehabilitation following disease or injury; it can be used either alone or in combination with any accessory, consumable or other piece of medical equipment."
+  },
+  {
+    "id": 4,
+    "keywords": ["budget allocation", "funding", "budget", "allocation", "expenditure", "funding designation"],
+    "response": "A budget allocation is the amount of funding designated to each expenditure line. It designates the maximum amount of funding an organization is willing to spend on a given item or program.",
+    "link": {
+      "text": "Download User Manual for Budget Allocation",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=budgetAllction.docx&methodname=GET&fhttf=720440c2cffca52063d96363cb1c3f3c"
+    }
+  },
+  {
+    "id": 23,
+    "keywords": ["indent generation", "indent approval", "RV generation"],
+    "response": "For Indent Generation and RV at Unit Level in e-Aushadhi and e-Upkaran:\n1. Go to Home Menu → Services → eUpkaran Indent → Indent for Non-Expendable\n2. Get approval at CO Level\n3. Make request at AFMSD Level\n4. Acknowledge at Unit Level\n5. Generate RV\n6. Complete BoO Verification, Freezing, CRV, and update Installation Date, AMC/CMC",
+    "link": {
+      "text": "Download User Manual for Indent Generation, Approval and RV",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=Indent%20Generation%20and%20Approval%20at%20Unit%20Level.pdf&methodname=GET&fhttf=6fedc8b92d1a68ff19547a4b084445c4"
+    }
+  },
+  {
+    "id": 29,
+    "keywords": ["batch entry", "unit level batch", "NABL report", "delivery package"],
+    "response": "For Batch Entry at Unit Level in e-Aushadhi and e-Upkaran:\n1. Go to Services → Challan/ Material Receipt Certificate Management → Batch Entry at Unit Level\n2. Select the PVMS No. and click Batch Delivery\n3. Add New Batch details, upload NABL Report if available\n4. Click Add Batch (repeat for multiple batches)\n5. Fill New Delivery Package Details and click Save",
+    "link": {
+      "text": "Download User Manual for Batch Entry at Unit Level",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=Batch%20Entry%20at%20Unit%20Level.pdf&methodname=GET&fhttf=e7b54b61fceded5630b3e7f0b1bdf8b0"
+    }
+  },
+  {
+    "id": 27,
+    "keywords": ["GeM process", "GeM entry", "BoO", "delivery details"],
+    "response": "For GeM Process in e-Aushadhi and e-Upkaran:\n1. Go to Services → Supply Order Management → GeM Process\n2. Select GeM Process, fill details, choose Unit Name and Item Category\n3. Click on GeM Entry, fill details including New Batch Details\n4. Upload NABL Report if available, click Add Batch\n5. Fill New Delivery Package Details and click Save\n6. For BoO: Go to Services → Challan / Material Receipt Certificate Management → BoO",
+    "link": {
+      "text": "Download User Manual for SO Management GeM Process",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=SO%20Management%20GeM%20process.pdf&methodname=GET&fhttf=aab817869ffbd23b460fb4d387343598"
+    }
+  },
+  {
+    "id": 8,
+    "keywords": ["supply interface", "designer buyer supplier", "collaboration areas", "supplier relations"],
+    "response": "The relationship and collaboration areas between and among the designer, buyer, and supplier with regard to supplier relations are considered and presented for the three planning-horizon levels of strategic, tactical, and operational."
+  },
+  {
+    "id": 16,
+    "keywords": ["budget configuration", "map unit name", "map code name", "line directories"],
+    "response": "For Budget Configuration in e-Aushadhi and e-Upkaran:\n1. Go to Admin → Budgetary Management → Budget Configuration Master\n2. Select Code Configuration Details and Map Unit Name\n3. Select Other Details and Map Code Name\n4. Click on Save Button to save the configuration",
+    "link": {
+      "text": "Download User Manual for Budget Configuration Master",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=Budget%20Configuration%20Master.docx&methodname=GET&fhttf=6ec8bd87dfc9d983ef3302e20e2c0845"
+    }
+  },
+  {
+    "id": 12,
+    "keywords": ["supply order approval", "approve supply order", "SO approval"],
+    "response": "For Supply Order Approval in e-Aushadhi and e-Upkaran:\n1. Go to Service → Approval Management → Supply Order Approval\n2. Select the checkbox - Approval Button will be shown and print button will appear to view and print\n3. Click on Approval Button\n4. Fill all Details and Click on Approve button to complete the approval",
+    "link": {
+      "text": "Download User Manual for SO Approval",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=ApproveSO.docx&methodname=GET&fhttf=957ac779047f89cb701c6272ba40d8f4"
+    }
+  },
+  {
+    "id": 5,
+    "keywords": ["MMF", "Monthly Maintenance Figure", "monthly maintenance", "maintenance figures", "consumption pattern"],
+    "response": "One such method was adopted in our hospital, called the Monthly Maintenance Figures (MMF). MMF is a prediction of items/consumables based on past history i.e. consumption pattern of last 6-8 months."
+  },
+  {
+    "id": 14,
+    "keywords": ["SO budgetary", "supply order budgetary", "budgetary head", "source of fund"],
+    "response": "For Supply Order Budgetary in e-Aushadhi and e-Upkaran:\n1. Go to Service → Supply Order Management → Draft Supply Order Preparation\n2. Select Checkbox then SO Budgetary Button will appear\n3. Click on SO Budgetary Button\n4. Click on + Button shown in List\n5. Select Budgetary Head, Source of Fund, Major, Minor and Paying Authority\n6. Click on Save Button\n7. Click On Final Save to complete SO Budgetary",
+    "link": {
+      "text": "Download User Manual for SO Budgetary",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=sobudgetary.docx&methodname=GET&fhttf=f1c6e47d73b363ebc9836ef9aba31a3d"
+    }
+  },
+  {
+    "id": 13,
+    "keywords": ["draft supply order", "SO preparation", "supply order preparation"],
+    "response": "For Draft Supply Order Preparation in e-Aushadhi and e-Upkaran:\n1. Go to Service → Supply Order Management → Draft Supply Order Preparation\n2. After Draft Save, proceed to SO preparation\n3. Click On SO preparation Button to open the SO Package Generate Form\n4. Select Manufacture to view Nomenclature Details\n5. Select Supply Order Details and Select Component Details\n6. Click on Save Button to save SO preparation",
+    "link": {
+      "text": "Download User Manual for Draft Supply Order",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=draftsupplyorder.docx&methodname=GET&fhttf=a88f3766f2ad33bbd3020bb0f1149f31"
+    }
+  },
+  {
+    "id": 17,
+    "keywords": ["budgetary head", "add budgetary head", "budget management"],
+    "response": "To add Budgetary Head in e-Aushadhi and e-Upkaran:\n1. Go to Admin → Budgetary Management → Budgetary Head\n2. Click on Add Button to open the Form\n3. Enter Budgetary Head Details\n4. Click on Save Button to save\n5. After adding, you can also Modify, Delete And View the Budgetary Head",
+    "link": {
+      "text": "Download User Manual for Budgetary Head",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=Budgetary%20Head.docx&methodname=GET&fhttf=1b54b621f0725e1996a7a729479d92a9"
+    }
+  },
+  {
+    "id": 24,
+    "keywords": ["SO draft", "DPP", "RE", "batch entry", "GeM"],
+    "response": "For SO Draft (DPP/RE) at Unit Level in e-Aushadhi and e-Upkaran:\n1. Create RE (DPP) at Depot Level and Unit Level\n2. Get approval at Unit Level\n3. Complete Batch Entry/GeM at Unit Level & CRV\n4. View inventory at Unit Level",
+    "link": {
+      "text": "Download User Manual for Draft Supply Order",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=draftsupplyorder.docx&methodname=GET&fhttf=a88f3766f2ad33bbd3020bb0f1149f31"
+    }
+  },
+  {
+    "id": 15,
+    "keywords": ["source of fund", "fund master", "add source of fund"],
+    "response": "To add Source Of Fund in e-Aushadhi and e-Upkaran:\n1. Go to Admin → Budgetary Management → Source Of Fund Master\n2. Click on Add Button to open the Form\n3. Enter Source Of Fund Details\n4. Click on Save Button to save\n5. After adding, you can also Modify, Delete and View the Source Of Fund",
+    "link": {
+      "text": "Download User Manual for Source Of Fund",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=Source%20Of%20Fund.docx&methodname=GET&fhttf=3e747a150108a4d22056aa24930a4260"
+    }
+  },
+  {
+    "id": 7,
+    "keywords": ["supply order", "order placing", "supply goods", "supply services"],
+    "response": "A supply order is a note designed for processes that are involved in any transaction, such as order placings for work or the supply of goods or services towards the community.",
+    "link": {
+      "text": "Download User Manual for Supply Order",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=draftsupplyorder.docx&methodname=GET&fhttf=a88f3766f2ad33bbd3020bb0f1149f31"
+    }
+  },
+  {
+    "id": 19,
+    "keywords": ["major head", "add major head", "major head master"],
+    "response": "To add Major Head in e-Aushadhi and e-Upkaran:\n1. Go to Admin → Budgetary Management → Major Head Master\n2. Click on Add Button to open the Form\n3. Enter Major Head Details\n4. Click on Save Button to save\n5. After adding, you can also Modify, Delete and View the Major Head",
+    "link": {
+      "text": "Download User Manual for Major Head Master",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=Major%20Head%20Master.docx&methodname=GET&fhttf=a95f4bfe8c8dad14faa9508d96b5947e"
+    }
+  },
+  {
+    "id": 18,
+    "keywords": ["code head", "add code head", "code head master"],
+    "response": "To add Code Head in e-Aushadhi and e-Upkaran:\n1. Go to Admin → Budgetary Management → Code Head Master\n2. Click on Add Button to open the Form\n3. Enter Code Head Details\n4. Click on Save Button to save\n5. After adding, you can also Modify, Delete and View the Code Head",
+    "link": {
+      "text": "Download User Manual for Code Head Master",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=Code%20Head%20Master.docx&methodname=GET&fhttf=2eb5023ababc310180201012dd65b16c"
+    }
+  },
+  {
+    "id": 38,
+    "keywords": ["minor head", "add minor head", "minor head master"],
+    "response": "To add Minor Head in e-Aushadhi and e-Upkaran:\n1. Go to Admin → Budgetary Management → Minor Head Master\n2. Click on Add Button to open the Form\n3. Enter Minor Head Details\n4. Click on Save Button to save\n5. After adding, you can also Modify, Delete and View the Minor Head",
+    "link": {
+      "text": "Download User Manual for Minor Head Master",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=Minor%20Head%20Master.docx&methodname=GET&fhttf=3cc06b8220943abdd8b34a60a7fb8115"
+    }
+  },
+  {
+    "id": 40,
+    "keywords": ["manual", "guide", "help documentation", "user guide", "tutorial"],
+    "response": "We have various user manuals available. Please ask about a specific process (e.g., 'budget configuration', 'indent generation', 'rate contract', etc.) and I can provide you with information and the relevant user manual."
+  },
+  {
+    "id": 11,
+    "keywords": ["rate contract process", "capture rate contract", "central rate contract", "price agreement", "PPP"],
+    "response": "For Rate Contract in e-Aushadhi and e-Upkaran:\n1. Go to Services → Rate Contract Management → Rate Contract\n2. For Head Quarter (DGAFMS) Level, you can create Rate Contract and PPP of Drug, perform modifications, PBG and Extensions\n3. For AFMSD Level, you can create Price Agreement, view Rate Contract and PPP, and perform modifications\n4. Click on Rate Contract\n5. Select Rate Contract Item Wise Details\n6. Select Tender Details\n7. Enter Contract Details\n8. Click On Save Button To save",
+    "link": {
+      "text": "Download User Manual for Rate Contract",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=Rate%20Contract.docx&methodname=GET&fhttf=4d2627e3883633c5f5d5381f5c83a7d3"
+    }
+  },
+  {
+    "id": 10,
+    "keywords": ["rate contract tender", "add tender", "tender form", "e-Aushadhi tender", "e-Upkaran tender"],
+    "response": "To add a Rate Contract Tender in e-Aushadhi and e-Upkaran:\n1. Go to Service → Rate Contract Management → Rate Contract\n2. Click On Tender Button to open the Tender Form\n3. Enter Tender Details\n4. Click on Save Button to save\n5. For modifications, select the tender from the form and make changes\n6. Click on Modify Button to save changes",
+    "link": {
+      "text": "Download User Manual for Rate Contract Tender",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=Rate%20Contract%20Tender.docx&methodname=GET&fhttf=7b738908a65f8bad8f3f6672caf9946b"
+    }
+  },
+  {
+    "id": 6,
+    "keywords": ["rate contract", "rate agreement", "procurement cost", "procurement strategy"],
+    "response": "A Rate Contract or a Rate Agreement is a procurement cost reduction strategy aimed at standardizing procurement prices for commonly procured, homogenous and price varying inputs.",
+    "link": {
+      "text": "Download User Manual for Rate Contract",
+      "url": "https://prdeaushdiupkrn.dcservices.in/AFMS/tutorial/getTutorialFile?strFileName=Rate%20Contract.docx&methodname=GET&fhttf=4d2627e3883633c5f5d5381f5c83a7d3"
+    }
+  },
+  {
+    "id": 2,
+    "keywords": ["NIV", "NIV No", "NIV Number", "NIV No."],
+    "response": "NIV No. is not a word that someone knows and uses sometimes used in an exaggerated way to make a forceful statement."
+  },
+  {
+    "id": 36,
+    "keywords": ["contact", "email", "phone", "reach"],
+    "response": "You can contact us at support@chatbotcompany.com or call us at 9988776655.",
+    "link": {
+      "text": "Visit our contact page",
+      "url": "https://example.com/contact"
+    }
+  },
+  {
+    "id": 37,
+    "keywords": ["how are you", "how do you do", "how's it going"],
+    "response": "I'm doing well, thanks for asking! How can I assist you today?"
+  },
+  {
+    "id": 34,
+    "keywords": ["who are you", "what are you", "your name"],
+    "response": "I am e-Aushadi and e-Upkaram Assistant, a rule-based chatbot designed to help answer your questions."
+  },
+  {
+    "id": 31,
+    "keywords": ["hello", "hi", "hey", "howdy", "namaste"],
+    "response": "Hello! How can I help you today?"
+  },
+  {
+    "id": 35,
+    "keywords": ["help", "support", "assist"],
+    "response": "I'm here to help! Please let me know what you need assistance with."
+  },
+  {
+    "id": 32,
+    "keywords": ["bye", "goodbye", "see you", "talk later"],
+    "response": "Goodbye! Have a great day!"
+  },
+  {
+    "id": 33,
+    "keywords": ["thank", "thanks"],
+    "response": "You're welcome! Is there anything else I can help you with?"
+  },
+  {
+    "id": 30,
+    "keywords": ["abcd"],
+    "response": "qwertyuiopasdfghjklzxcvbnm,1234567890"
+  }
+]
